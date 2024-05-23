@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monaliza's Personal Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('b1.jpg'); 
+            background-size: cover; 
+            background-repeat: no-repeat;
+            color: #110c0c; /* Set text color to black */
+        }
+        header {
+            background-color: #edf0f0;
+            color: #fff;
+            padding: 10px 0;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: #111010;
+            text-decoration: none;
+        }
+        section {
+            padding: 50px;
+            display: none; /* Initially hide all sections */
+        }
+        footer {
+            background-color: #e9eeee;
+            margin-left: 300px;
+            text-align: center; /* Align text to the center */
+            padding: 20px; /* Adjust padding */
+            position: fixed; /* Fixed position */
+            bottom: 0; /* Stick to the bottom */
+            right: 0; /* Align to the right */
+            width: 100%; /* Take full width */
+            z-index: 999; /* Set z-index to keep it above other content */
+            font-size: 1.0em; /* Adjust font size */
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #1b1a1a;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .btn:hover {
+            background-color: #444;
+        }
+        .centered-text {
+            text-align: center;
+            font-size: 2em; /* Increase font size */
+            margin-top: 50px; /* Move the text down slightly */
+        }
+        #about p, #blog p {
+            font-size: 1.2em; /* Increase font size for these sections */
+        }
+        #about img {
+            max-width: 20%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home" onclick="showSection('home')">Home</a></li>
+                <li><a href="#about" onclick="showSection('about')">About Me</a></li>
+                <li><a href="#blog" onclick="showSection('blog')">Physical Fitness Blog</a></li>
+                <li><a href="#contact" onclick="showSection('contact')">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="home" class="centered-text">
+        <h1>Welcome to My Personal Website</h1>
+        <p></p>
+    </section>
+    <section id="about">
+        <p>Hi, I'm Monaliza Odag and I live in Fimagas Katipunan, Zamboanga Del Norte. I am 20 years old and a student of BSIS, growing up in a supportive family as the only daughter. I have always been encouraged to pursue my dreams and passions.
+            I come from a supportive family which has greatly shaped my values and ambitions. Their encouragement has been instrumental in my personal and professional growth. Our family enjoys traveling and bonding together.
+            I finished my primary level at Carupay Elementary School and continued my high school at Katipunan National High School. I am now pursuing my college education at JRMSU Katipunan. I realized that it's not just about studying and learning, but also enjoying life as a student. Even with the challenges we face, the more we learn and grow. Studying is not just about academics, but also applying what we learn to ourselves.
+        </p>
+        <img src="my image 1.jpg" alt="Monaliza Image 1">
+        <img src="my image 2.jpg" alt="Monaliza Image 2">
+        <img src="my image 3.jpg" alt="Monaliza Image 3">
+    </section>
+    <section id="blog">
+        <p>This website shows pictures and supports individuals seeking to enhance their physical, mental, and emotional well-being. It aims to educate, inspire, and empower visitors to prioritize self-care practices, develop healthier habits, manage stress, and cultivate a greater sense of overall fulfillment and balance in their lives. Visitors can also find encouragement and support from others on similar journeys toward self-improvement and wellness.</p>
+        <img src="my image 4.jpg" alt="Monaliza Image 1">
+    
+    </section>
+    <section id="contact">
+        <form action="submit_form.php" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2024 Monalisa Website</p>
+    </footer>
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections first
+            document.querySelectorAll('section').forEach(section => {
+                section.style.display = 'none';
+            });
+            // Show the selected section
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
